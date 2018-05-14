@@ -1,0 +1,248 @@
+@import 'mixins';
+
+.navbar-default {
+
+  .navbar-brand {
+    padding-top: 30px;
+  }
+  .navbar-nav {
+    li {
+      a {
+        padding-top: 43px;
+        padding-bottom: 43px;
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+          border-bottom: 2px solid #49cbcd;
+          color: #49cbcd;
+          background-color: #f8f9fb;
+        }
+      }
+    }
+  }
+}
+
+.carousel-caption {
+
+  h1 {
+    font-size: 63px;
+    margin-bottom: 40px;
+  }
+
+  p {
+    width: 374px;
+    font-size: 23px;
+    margin: 0 auto;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    width: 223px;
+    height: 63px;
+    margin-top: 55px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 26px;
+  }
+}
+
+.glyphicon-menu-left::before {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding-top: 10px;
+  font-size: 30px;
+  border-radius: 50%;
+  color: #49cbcd;
+  background-color: #fff;
+}
+
+.glyphicon-menu-right::before {
+  @extend .glyphicon-menu-left::before;
+}
+
+.glyphicon-menu-left {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+
+}
+
+.glyphicon-menu-right {
+  @extend .glyphicon-menu-left;
+}
+
+.team {
+  margin-top: 107px;
+  margin-bottom: 130px;
+  text-align: center;
+  color: #4e525d;
+}
+
+.round {
+  width: 170px;
+  height: 170px;
+  overflow: hidden;
+  margin-bottom: 70px;
+  border-radius: 50%;
+  background-color: #eeeef0;
+}
+
+.person1 {
+  @extend .round;
+  background: url(../images/photo1.png) center no-repeat;
+  background-size: cover;
+}
+
+.person2 {
+  @extend .round;
+  background: url(../images/photo2.png) center no-repeat;
+  background-size: 170px auto;
+}
+
+.person3 {
+  @extend .round;
+  background: url(../images/photo3.png) center no-repeat;
+  background-size: auto 170px;
+}
+
+.person4 {
+  @extend .round;
+  background: url(../images/photo4.png) center no-repeat;
+  background-size: 170px auto;
+}
+
+.person-name {
+  text-align: center;
+}
+
+.about {
+  margin-top: 30px;
+  margin-bottom: 105px;
+}
+
+.grey {
+  background-color: #f1f1f1;
+  .promotion {
+    padding-top: 118px;
+
+    .row {
+
+      .first {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include opportunity(#485460, #788492);
+      }
+
+      .second {
+        @extend .first;
+        @include opportunity(#49cbcd, #49cbcd);
+      }
+
+      .third {
+        @extend .first;
+        @include opportunity(#485460, #788492);
+      }
+    }
+  }
+}
+
+footer {
+  background: url(../images/foot_image.png) top left no-repeat;
+  background-size: cover;
+  padding-bottom: 95px;
+
+  .contact_us {
+    margin-top: 107px;
+    margin-bottom: 114px;
+    text-align: center;
+    color: #fff;
+    font-size: 42px;
+  }
+
+  .foot_text1 {
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .foot_text2 {
+    font-size: 14px;
+    color: #999999;
+    line-height: 0.5;
+  }
+
+  .social {
+    display: flex;
+    padding-top: 20px;
+    margin-bottom: 20px;
+
+    .fb {
+      display: inline-block;
+      margin-right: 15px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      font-size: 23px;
+      text-align: center;
+      padding-top: 7px;
+      background-color: #3b5997;
+      color: #fff;
+    }
+
+    .tw {
+      @extend .fb;
+      background-color: #3ec2f3;
+    }
+
+    .google {
+      @extend .fb;
+      background-color: #e44c41;
+    }
+  }
+  .foot_text3 {
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+.name {
+  margin-right: 30px;
+  width: 270px !important;
+}
+
+.mail {
+  width: 251px !important;
+}
+
+.text {
+  margin-top: 30px;
+  width: 570px !important;
+  height: 179px !important;
+  resize: none;
+}
+
+.btn {
+  display: block;
+  margin-top: 29px;
+  width: 170px;
+  background-color: #49cbcd !important;
+  font-size: 22px;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
