@@ -1,4 +1,4 @@
-@mixin opportunity($top_color, $button_color) {
+@mixin opportunity($top_color, $button_color, $main_font) {
 
   .basic {
     width: 367px;
@@ -9,6 +9,7 @@
 
     p {
       font-size: 26px;
+      font-family: $main_font;
       color: #fff;
     }
   }
@@ -22,6 +23,7 @@
 
     p {
       font-size: 20px;
+      font-family: $main_font;
       color: #5f6a75;
 
       &:before {
@@ -42,6 +44,7 @@
 
     p {
       font-size: 14px;
+      font-family: $main_font;
       color: #9499a0;
     }
   }

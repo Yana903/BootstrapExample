@@ -1,4 +1,25 @@
 @import 'mixins';
+$main_font: "OpenSansRegular";
+
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("../fonts/OpenSansRegular/OpenSansRegular.eot");
+  src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"),
+  url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "OpenSansSemiBold";
+  src: url("../fonts/OpenSansSemiBold/OpenSansSemiBold.eot");
+  src: url("../fonts/OpenSansSemiBold/OpenSansSemiBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/OpenSansSemiBold/OpenSansSemiBold.woff") format("woff"),
+  url("../fonts/OpenSansSemiBold/OpenSansSemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 
 .navbar-default {
 
@@ -11,6 +32,7 @@
         padding-top: 43px;
         padding-bottom: 43px;
         border-bottom: 2px solid transparent;
+        font-family: $main_font;
 
         &:hover {
           border-bottom: 2px solid #49cbcd;
@@ -27,11 +49,13 @@
   h1 {
     font-size: 63px;
     margin-bottom: 40px;
+    font-family: "OpenSansSemiBold";
   }
 
   p {
     width: 374px;
     font-size: 23px;
+    font-family: $main_font;
     margin: 0 auto;
   }
   a {
@@ -46,6 +70,7 @@
     border-radius: 5px;
     color: #fff;
     font-size: 26px;
+    font-family: "OpenSansSemiBold";
   }
 }
 
@@ -92,6 +117,10 @@
   background-color: #eeeef0;
 }
 
+h2 {
+  font-family: $main_font;
+}
+
 .person1 {
   @extend .round;
   background: url(../images/photo1.png) center no-repeat;
@@ -118,15 +147,27 @@
 
 .person-name {
   text-align: center;
+  line-height: 1;
+  font-size: 20px;
+  color: #71757d;
+  font-family: $main_font;
+}
+
+.seat {
+  @extend .person-name;
+  font-size: 14px;
 }
 
 .about {
+  @extend .seat;
+  line-height: 1.5;
   margin-top: 30px;
   margin-bottom: 105px;
 }
 
 .grey {
   background-color: #f1f1f1;
+  padding-bottom: 100px;
   .promotion {
     padding-top: 118px;
 
@@ -136,17 +177,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        @include opportunity(#485460, #788492);
+        @include opportunity(#485460, #788492, "OpenSansRegular");
       }
 
       .second {
         @extend .first;
-        @include opportunity(#49cbcd, #49cbcd);
+        @include opportunity(#49cbcd, #49cbcd, "OpenSansRegular");
       }
 
       .third {
         @extend .first;
-        @include opportunity(#485460, #788492);
+        @include opportunity(#485460, #788492, "OpenSansRegular");
       }
     }
   }
@@ -163,15 +204,18 @@ footer {
     text-align: center;
     color: #fff;
     font-size: 42px;
+    font-family: $main_font;
   }
 
   .foot_text1 {
     font-size: 24px;
+    font-family: $main_font;
     color: #fff;
   }
 
   .foot_text2 {
     font-size: 14px;
+    font-family: $main_font;
     color: #999999;
     line-height: 0.5;
   }
@@ -221,7 +265,7 @@ footer {
 
 .text {
   margin-top: 30px;
-  width: 570px !important;
+  width: 555px !important;
   height: 179px !important;
   resize: none;
 }
@@ -233,6 +277,7 @@ footer {
   background-color: #49cbcd !important;
   font-size: 22px;
   color: #fff;
+  font-family: $main_font;
 }
 
 

@@ -1,9 +1,22 @@
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("../fonts/OpenSansRegular/OpenSansRegular.eot");
+  src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "OpenSansSemiBold";
+  src: url("../fonts/OpenSansSemiBold/OpenSansSemiBold.eot");
+  src: url("../fonts/OpenSansSemiBold/OpenSansSemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansSemiBold/OpenSansSemiBold.woff") format("woff"), url("../fonts/OpenSansSemiBold/OpenSansSemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
 .navbar-default .navbar-brand {
   padding-top: 30px; }
 .navbar-default .navbar-nav li a {
   padding-top: 43px;
   padding-bottom: 43px;
-  border-bottom: 2px solid transparent; }
+  border-bottom: 2px solid transparent;
+  font-family: "OpenSansRegular"; }
 .navbar-default .navbar-nav li a:hover {
   border-bottom: 2px solid #49cbcd;
   color: #49cbcd;
@@ -11,10 +24,12 @@
 
 .carousel-caption h1 {
   font-size: 63px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  font-family: "OpenSansSemiBold"; }
 .carousel-caption p {
   width: 374px;
   font-size: 23px;
+  font-family: "OpenSansRegular";
   margin: 0 auto; }
 .carousel-caption a {
   display: inline-block;
@@ -27,7 +42,8 @@
   border: 3px solid #fff;
   border-radius: 5px;
   color: #fff;
-  font-size: 26px; }
+  font-size: 26px;
+  font-family: "OpenSansSemiBold"; }
 
 .glyphicon-menu-left::before, .glyphicon-menu-right::before {
   display: inline-block;
@@ -59,6 +75,9 @@
   border-radius: 50%;
   background-color: #eeeef0; }
 
+h2 {
+  font-family: "OpenSansRegular"; }
+
 .person1 {
   background: url(../images/photo1.png) center no-repeat;
   background-size: cover; }
@@ -75,15 +94,24 @@
   background: url(../images/photo4.png) center no-repeat;
   background-size: 170px auto; }
 
-.person-name {
-  text-align: center; }
+.person-name, .seat, .about {
+  text-align: center;
+  line-height: 1;
+  font-size: 20px;
+  color: #71757d;
+  font-family: "OpenSansRegular"; }
+
+.seat, .about {
+  font-size: 14px; }
 
 .about {
+  line-height: 1.5;
   margin-top: 30px;
   margin-bottom: 105px; }
 
 .grey {
-  background-color: #f1f1f1; }
+  background-color: #f1f1f1;
+  padding-bottom: 100px; }
 .grey .promotion {
   padding-top: 118px; }
 .grey .promotion .row .first, .grey .promotion .row .second, .grey .promotion .row .third {
@@ -98,6 +126,7 @@
   padding-bottom: 24px; }
 .grey .promotion .row .first .basic p, .grey .promotion .row .second .basic p, .grey .promotion .row .third .basic p {
   font-size: 26px;
+  font-family: "OpenSansRegular";
   color: #fff; }
 .grey .promotion .row .first .price, .grey .promotion .row .second .price, .grey .promotion .row .third .price {
   width: 367px;
@@ -108,6 +137,7 @@
   border-bottom: 1px solid #ecf0f1; }
 .grey .promotion .row .first .price p, .grey .promotion .row .second .price p, .grey .promotion .row .third .price p {
   font-size: 20px;
+  font-family: "OpenSansRegular";
   color: #5f6a75; }
 .grey .promotion .row .first .price p:before, .grey .promotion .row .second .price p:before, .grey .promotion .row .third .price p:before {
   display: inline-block;
@@ -123,6 +153,7 @@
   border-bottom: 1px solid #ecf0f1; }
 .grey .promotion .row .first .lorem p, .grey .promotion .row .second .lorem p, .grey .promotion .row .third .lorem p {
   font-size: 14px;
+  font-family: "OpenSansRegular";
   color: #9499a0; }
 .grey .promotion .row .first .buy, .grey .promotion .row .second .buy, .grey .promotion .row .third .buy {
   display: inline-block;
@@ -143,6 +174,7 @@
   padding-bottom: 24px; }
 .grey .promotion .row .second .basic p {
   font-size: 26px;
+  font-family: "OpenSansRegular";
   color: #fff; }
 .grey .promotion .row .second .price {
   width: 367px;
@@ -153,6 +185,7 @@
   border-bottom: 1px solid #ecf0f1; }
 .grey .promotion .row .second .price p {
   font-size: 20px;
+  font-family: "OpenSansRegular";
   color: #5f6a75; }
 .grey .promotion .row .second .price p:before {
   display: inline-block;
@@ -168,6 +201,7 @@
   border-bottom: 1px solid #ecf0f1; }
 .grey .promotion .row .second .lorem p {
   font-size: 14px;
+  font-family: "OpenSansRegular";
   color: #9499a0; }
 .grey .promotion .row .second .buy {
   display: inline-block;
@@ -188,6 +222,7 @@
   padding-bottom: 24px; }
 .grey .promotion .row .third .basic p {
   font-size: 26px;
+  font-family: "OpenSansRegular";
   color: #fff; }
 .grey .promotion .row .third .price {
   width: 367px;
@@ -198,6 +233,7 @@
   border-bottom: 1px solid #ecf0f1; }
 .grey .promotion .row .third .price p {
   font-size: 20px;
+  font-family: "OpenSansRegular";
   color: #5f6a75; }
 .grey .promotion .row .third .price p:before {
   display: inline-block;
@@ -213,6 +249,7 @@
   border-bottom: 1px solid #ecf0f1; }
 .grey .promotion .row .third .lorem p {
   font-size: 14px;
+  font-family: "OpenSansRegular";
   color: #9499a0; }
 .grey .promotion .row .third .buy {
   display: inline-block;
@@ -235,12 +272,15 @@ footer .contact_us {
   margin-bottom: 114px;
   text-align: center;
   color: #fff;
-  font-size: 42px; }
+  font-size: 42px;
+  font-family: "OpenSansRegular"; }
 footer .foot_text1 {
   font-size: 24px;
+  font-family: "OpenSansRegular";
   color: #fff; }
 footer .foot_text2 {
   font-size: 14px;
+  font-family: "OpenSansRegular";
   color: #999999;
   line-height: 0.5; }
 footer .social {
@@ -275,7 +315,7 @@ footer .foot_text3 {
 
 .text {
   margin-top: 30px;
-  width: 570px !important;
+  width: 555px !important;
   height: 179px !important;
   resize: none; }
 
@@ -285,6 +325,7 @@ footer .foot_text3 {
   width: 170px;
   background-color: #49cbcd !important;
   font-size: 22px;
-  color: #fff; }
+  color: #fff;
+  font-family: "OpenSansRegular"; }
 
 /*# sourceMappingURL=style.css.map */
