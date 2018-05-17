@@ -1,5 +1,6 @@
 @import 'mixins';
-$main_font: "OpenSansRegular";
+@import 'init';
+
 
 @font-face {
   font-family: "OpenSansRegular";
@@ -28,17 +29,20 @@ $main_font: "OpenSansRegular";
   }
   .navbar-nav {
     li {
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        border-bottom: 2px solid #49cbcd;
+        color: #49cbcd;
+        background-color: #f8f9fb;
+      }
       a {
         padding-top: 43px;
         padding-bottom: 43px;
-        border-bottom: 2px solid transparent;
+
         font-family: $main_font;
 
-        &:hover {
-          border-bottom: 2px solid #49cbcd;
-          color: #49cbcd;
-          background-color: #f8f9fb;
-        }
+
       }
     }
   }
@@ -115,6 +119,24 @@ $main_font: "OpenSansRegular";
   margin-bottom: 70px;
   border-radius: 50%;
   background-color: #eeeef0;
+  position: relative;
+
+  .glyphicon-plus {
+    display: none;
+    color: #f46d6d;
+    font-size: 40px;
+    position: absolute;
+    top: 60px;
+    left: 80px;
+  }
+
+  &:hover .glyphicon-plus{
+    display: block;
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
 h2 {
@@ -123,26 +145,18 @@ h2 {
 
 .person1 {
   @extend .round;
-  background: url(../images/photo1.png) center no-repeat;
-  background-size: cover;
 }
 
 .person2 {
   @extend .round;
-  background: url(../images/photo2.png) center no-repeat;
-  background-size: 170px auto;
 }
 
 .person3 {
   @extend .round;
-  background: url(../images/photo3.png) center no-repeat;
-  background-size: auto 170px;
 }
 
 .person4 {
   @extend .round;
-  background: url(../images/photo4.png) center no-repeat;
-  background-size: 170px auto;
 }
 
 .person-name {
@@ -168,31 +182,60 @@ h2 {
 .grey {
   background-color: #f1f1f1;
   padding-bottom: 100px;
-  .promotion {
-    padding-top: 118px;
+  .col-md-4 {
+    ul {
+      list-style: none;
+      padding-left: 0;
+      li {
+        max-width: 367px;
+        background-color: #fff;
+        border-bottom: 1px solid #ecf0f1;
+        text-align: center;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        font-size: 14px;
+        font-family: $main_font;
+        color: #8c9299;
 
-    .row {
-
-      .first {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        @include opportunity(#485460, #788492, "OpenSansRegular");
+        &:first-child {
+          background-color: #485460;
+          font-size: 26px;
+          color: #fff;
+        }
+        &:nth-child(2) {
+          background-color: #f8f9fb;
+          color: #485460;
+          font-size: 20px;
+        }
+        a:last-of-type {
+          display: inline-block;
+          width: 168px;
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: center;
+          text-decoration: none;
+          background-color: #788492;
+          color: #fff;
+          font-size: 17px;
+          border-radius: 3px;
+        }
       }
+    }
 
-      .second {
-        @extend .first;
-        @include opportunity(#49cbcd, #49cbcd, "OpenSansRegular");
-      }
-
-      .third {
-        @extend .first;
-        @include opportunity(#485460, #788492, "OpenSansRegular");
+    &:nth-child(2) {
+      ul {
+        li {
+          &:first-child {
+            background-color: #49cbcd;
+          }
+          a:last-of-type {
+            background-color: #49cbcd;
+          }
+        }
       }
     }
   }
 }
-
 footer {
   background: url(../images/foot_image.png) top left no-repeat;
   background-size: cover;
@@ -255,25 +298,24 @@ footer {
 }
 
 .name {
-  margin-right: 30px;
   width: 270px !important;
 }
 
 .mail {
-  width: 251px !important;
+  width: 270px !important;
 }
 
 .text {
   margin-top: 30px;
-  width: 555px !important;
+  width: 100%;
   height: 179px !important;
   resize: none;
 }
 
 .btn {
   display: block;
-  margin-top: 29px;
   width: 170px;
+  margin-top: 29px;
   background-color: #49cbcd !important;
   font-size: 22px;
   color: #fff;
@@ -281,10 +323,101 @@ footer {
 }
 
 
+@include max-screen($point-1) {
+  .navbar-header {
+    padding-bottom: 50px;
+  }
 
+  .navbar-default .navbar-nav li a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
+  .glyphicon-menu-right {
+    right: 28px;
+  }
 
+  .carousel-caption h1 {
+    font-size: 43px;
+    margin-bottom: 20px;
+  }
+}
 
+@include max-screen($point-2) {
+  .carousel-caption a {
+    margin-top: 20px;
+  }
+  .glyphicon-menu-right {
+    right: 40px;
+  }
+
+  .carousel-caption a {
+    font-size: 20px;
+    width: 200px;
+    height: 53px;
+    margin-top: 10px;
+  }
+
+  .carousel-caption p {
+    font-size: 20px;
+  }
+
+  .carousel-caption h1 {
+    font-size: 26px;
+    line-height: 0;
+  }
+}
+
+@include max-screen($point-3) {
+  .carousel-caption a {
+    font-size: 14px;
+    width: 155px;
+    height: 30px;
+    padding-top: 2px;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  .carousel-caption p {
+    font-size: 12px;
+    width: 200px;
+  }
+
+  .carousel-caption h1 {
+    font-size: 18px;
+    line-height: 0;
+  }
+
+  .glyphicon-menu-left::before, .glyphicon-menu-right::before {
+    width: 30px;
+    height: 30px;
+    padding-top: 4px;
+    font-size: 20px;
+  }
+
+  footer .contact_us {
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+
+  footer .foot_text1 {
+    font-size: 18px;
+  }
+
+  footer .foot_text2, footer .foot_text3 {
+    font-size: 10px;
+  }
+
+  .btn {
+    width: 100px;
+    font-size: 16px;
+  }
+
+  .grey {
+    padding-bottom: 50px;
+  }
+}
 
 
 
